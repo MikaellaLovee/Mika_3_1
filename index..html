@@ -24,7 +24,7 @@ h2 {
 }
 
 h3 {
-    color: pink;
+    color: turquoise;
 }
 
 p {
@@ -32,7 +32,7 @@ p {
 }
 
 li {
-    color: gray;
+    color: silver;
 }
 
 button {
@@ -44,15 +44,15 @@ button {
 }
 
 .link {
-    color: green;
+    color: lightblue;
 }
 
 .special-link {
-    color: blue;
+    color: purple;
 }
 
 .highlighted {
-    color: black;
+    color: #E6E6FA; /* Лавандовый */
 }
 
 .note {
@@ -84,39 +84,40 @@ button {
 }
 
 [href="#"] {
-    color: green;
+    color: lightblue;
 }
 
 [class="link"] {
-    color: green;
+    color: lightblue;
 }
 
 .nav-list li:first-child a {
-    color: green;
+    color: lightblue;
 }
 
 .nav-list li:nth-child(2) a {
-    color: blue;
+    color: purple;
 }
 
 .nav-list li:last-child a {
-    color: yellow;
+    color: gold;
 }
 
+/* Исправленные селекторы для цветов списка */
 .color-list li:nth-child(1) {
-    color: gray;
+    color: silver;
 }
 
 .color-list li:nth-child(2) {
-    color: brown;
+    color: #CD7F32; /* Бронзовый */
 }
 
 .color-list li:nth-child(3) {
-    color: black;
+    color: #E6E6FA; /* Лавандовый */
 }
 
 .widget:first-of-type h3 {
-    color: pink;
+    color: turquoise;
 }
 
 .widget:last-of-type h3 {
@@ -133,7 +134,7 @@ section.content article.post p {
 }
 
 .sidebar .widget ul li {
-    color: gray;
+    color: silver;
 }
 
 .sidebar div.widget p.note {
@@ -162,18 +163,19 @@ h2 + p {
     font-style: italic;
 }
 
+/* Исправленные селекторы для span внутри списка цветов */
 .color-list li:nth-child(1) span {
-    color: gray;
+    color: silver;
     font-weight: bold;
 }
 
 .color-list li:nth-child(2) span {
-    color: brown;
+    color: #CD7F32; /* Бронзовый */
     font-weight: bold;
 }
 
 .color-list li:nth-child(3) span {
-    color: black;
+    color: #E6E6FA; /* Лавандовый */
     font-weight: bold;
 }
 
@@ -253,9 +255,9 @@ button {
 <h1 class="main-title">Красный</h1>
 <nav>
 <ul class="nav-list">
-<li><a href="#" class="link">Зеленый</a></li>
-<li><a href="#" class="link special-link">Синий</a></li>
-<li><a href="#" class="link">Желтый</a></li>
+<li><a href="#" class="link">Голубой</a></li>
+<li><a href="#" class="link special-link">Фиолетовый</a></li>
+<li><a href="#" class="link">Золотой</a></li>
 </ul>
 </nav>
 </header>
@@ -271,11 +273,11 @@ button {
 </section>
 <section class="sidebar">
 <div class="widget">
-<h3>Розовый</h3>
+<h3>Бирюзовый</h3>
 <ul class="color-list">
-<li>Цвет: <span>Серый</span></li>
-<li>Цвет: <span>Коричневый</span></li>
-<li class="highlighted">Цвет: <span>Черный</span></li>
+<li>Цвет: <span>Серебряный</span></li>
+<li>Цвет: <span>Бронзовый</span></li>
+<li class="highlighted">Цвет: <span>Лавандовый</span></li>
 </ul>
 </div>
 <div class="widget important-widget">
@@ -284,11 +286,7 @@ button {
 </div>
 </section>
 <footer>
-<form action="#" class="form">
-<label for="name">Введите имя:</label>
-<input type="text" id="name" placeholder="Белый">
-<button type="submit" class="submit-btn">Черный</button>
-</form>
+<!-- Форма удалена -->
 </footer>
 </body>
 </html>
