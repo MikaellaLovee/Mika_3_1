@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Лабораторная работа: Селекторы CSS</title>
+<style>
+* {
+    color: inherit;
+    font-family: Arial, sans-serif;
+}
+body {
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+h1 {
+    color: red;
+}
+
+h2 {
+    color: orange;
+}
+
+h3 {
+    color: pink;
+}
+
+p {
+    color: purple;
+}
+
+li {
+    color: gray;
+}
+
+button {
+    color: black;
+}
+
+.main-title {
+    color: red;
+}
+
+.link {
+    color: green;
+}
+
+.special-link {
+    color: blue;
+}
+
+.highlighted {
+    color: black;
+}
+
+.note {
+    color: maroon;
+}
+
+.submit-btn {
+    color: black;
+}
+
+.important-widget h3 {
+    color: maroon;
+}
+
+#first-post h2 {
+    color: orange;
+}
+
+#first-post p {
+    color: orange;
+}
+
+#name {
+    color: white;
+}
+
+[placeholder="Белый"] {
+    color: white;
+}
+
+[href="#"] {
+    color: green;
+}
+
+[class="link"] {
+    color: green;
+}
+
+.nav-list li:first-child a {
+    color: green;
+}
+
+.nav-list li:nth-child(2) a {
+    color: blue;
+}
+
+.nav-list li:last-child a {
+    color: yellow;
+}
+
+.color-list li:nth-child(1) {
+    color: gray;
+}
+
+.color-list li:nth-child(2) {
+    color: brown;
+}
+
+.color-list li:nth-child(3) {
+    color: black;
+}
+
+.widget:first-of-type h3 {
+    color: pink;
+}
+
+.widget:last-of-type h3 {
+    color: maroon;
+}
+
+.link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+section.content article.post p {
+    color: purple;
+}
+
+.sidebar .widget ul li {
+    color: gray;
+}
+
+.sidebar div.widget p.note {
+    color: maroon;
+}
+
+footer form input[type="text"] {
+    color: white;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+h2 + p {
+    color: purple;
+}
+
+.widget h3 + ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.important-widget h3 + p {
+    color: maroon;
+    font-style: italic;
+}
+
+.color-list li:nth-child(1) span {
+    color: gray;
+    font-weight: bold;
+}
+
+.color-list li:nth-child(2) span {
+    color: brown;
+    font-weight: bold;
+}
+
+.color-list li:nth-child(3) span {
+    color: black;
+    font-weight: bold;
+}
+
+header {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.content {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.post {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.sidebar {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.widget {
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.color-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+footer {
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+}
+
+input, button {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input {
+    background-color: #333;
+}
+button {
+    background-color: #f0f0f0;
+    cursor: pointer;
+    border: 1px solid #999;
+}
+</style>
+</head>
+<body>
+<header>
+<h1 class="main-title">Красный</h1>
+<nav>
+<ul class="nav-list">
+<li><a href="#" class="link">Зеленый</a></li>
+<li><a href="#" class="link special-link">Синий</a></li>
+<li><a href="#" class="link">Желтый</a></li>
+</ul>
+</nav>
+</header>
+<section class="content">
+<article class="post" id="first-post">
+<h2>Пост 1: Оранжевый</h2>
+<p>Этот блок текста должен стать оранжевым.</p>
+</article>
+<article class="post">
+<h2>Пост 2: Фиолетовый</h2>
+<p>Этот блок текста должен стать фиолетовым.</p>
+</article>
+</section>
+<section class="sidebar">
+<div class="widget">
+<h3>Розовый</h3>
+<ul class="color-list">
+<li>Цвет: <span>Серый</span></li>
+<li>Цвет: <span>Коричневый</span></li>
+<li class="highlighted">Цвет: <span>Черный</span></li>
+</ul>
+</div>
+<div class="widget important-widget">
+<h3>Бордовый</h3>
+<p class="note">Этот текст должен стать бордовым.</p>
+</div>
+</section>
+<footer>
+<form action="#" class="form">
+<label for="name">Введите имя:</label>
+<input type="text" id="name" placeholder="Белый">
+<button type="submit" class="submit-btn">Черный</button>
+</form>
+</footer>
+</body>
+</html>
